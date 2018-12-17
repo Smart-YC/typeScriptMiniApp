@@ -2,11 +2,12 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
+  mode: 'development',
   entry: './app.js',
   output: {
-    filename: '[name].js',
+    filename: 'bundle.js',
     publicPath: '/',
-    path: resolve('dist'),
+    path: path.resolve(__dirname, '../dist'),
   },
   module: {
     rules: [
